@@ -1,0 +1,79 @@
+class PSHS_Galaxy:
+    def __init__(self, planet):
+        self.__planet = planet
+
+    def get_planet(self):
+        return self.__planet
+
+    def set_planet(self, planet):
+        self.__planet = planet
+
+class Nationalities(PSHS_Galaxy):
+    def __init__ (self, planet, country):
+        super().__init__(planet)
+        self.__country = country
+
+    def get_country(self):
+        return self.__country
+    
+    def set_country(self, country):
+        self.__country = country
+
+class Alien(PSHS_Galaxy):
+    def __init__ (self, planet):
+        super().__init__(planet)
+
+class Filipino(Nationalities):
+    def __init__(self, planet, country, language):
+        super().__init__(planet, country)
+        self.__language = language
+
+    def get_language(self):
+        return self.__language
+
+    def set_language(self, language):
+        self.__language = language
+
+class Spaniard(Nationalities):
+    def __init__(self, planet, country, language):
+        super().__init__(planet, country)
+        self.__language = language
+
+    def get_language(self):
+            return self.__language
+    
+    def set_language(self, language):
+        self.__language = language
+
+class Indonesian(Nationalities):
+    def __init__(self, planet, country, language):
+        super().__init__(planet, country)
+        self.__language = language
+
+    def get_language(self):
+            return self.__language
+    
+    def set_language(self, language):
+        self.__language = language
+
+class Marvel(Alien):
+    def __init__(self, planet, character):
+        super().__init__(planet)
+        self.character = character
+
+class Avengers(Alien):
+    def __init__(self, planet, character):
+        super().__init__(planet)
+        self.character = character
+
+person1 = Filipino("Earth", "Philippines", "Filipino")
+person2 = Spaniard("Earth", "Spain", "Spanish")
+person3 = Indonesian("Earth", "Indonesia", "Indo")
+
+print(person1.get_language())
+print(person2.get_language())
+print(person3.get_language())
+
+alien1 = Marvel("Guardians of the Galaxy", "Drak")
+alien2 = Avengers("Guardians of the Galaxy", "Groot")
+        
